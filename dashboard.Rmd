@@ -1,30 +1,67 @@
 ---
-title: "dashboard"
-author: "Rachelle Juan"
-date: "11/2/2021"
-output: html_document
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
 ```
 
-## R Markdown
+```{r}
+data("rest_inspec")
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+rest_inspec_df = 
+  rest_inspec %>% 
+  janitor::clean_names() %>% 
+  select(boro, cuisine_description, dba, inspection_date, action, violation_description, critical_flag, score, grade) %>% 
+  filter(
+    cuisine_description %in% c("Pizza", "Delicatessen", "Hotdogs",  "Bagels/Pretzels", "Donuts")
+  ) %>% 
+  drop_na(grade)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
+Column {data-width=650}
+-----------------------------------------------------------------------
 
-You can also embed plots, for example:
+### Chart 1
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+rest_inspec_df %>% 
+  mutate(
+    cuisine_description = fct_reorder(cuisine_description, score)
+  ) %>% 
+  plot_ly(
+    x = ~cuisine_description, y = ~score, type = "box", color = ~cuisine_description, colors = "viridis"
+  )
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart 2
+
+```{r}
+rest_inspec_df %>% 
+  count(cuisine_description) %>% 
+  mutate(
+    cuisine_description = fct_reorder(cuisine_description, n)
+  ) %>% 
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis")
+```
+
+### Chart 3
+
+```{r}
+rest_inspec_df %>% 
+  filter(
+    boro == "MANHATTAN"
+  ) %>% 
+  plot_ly(x = ~inspection_date, y = ~score, color = ~cuisine_description, type = "scatter", colors = "viridis")
