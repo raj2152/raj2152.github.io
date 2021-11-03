@@ -1,0 +1,49 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Education  
+
+**Columbia University, Mailman School of Public Health**				   
+New York, NY | Expected May 2022  
+Master of Public Health (MPH), Health Policy & Management			        
+Certificate in Applied Biostatistics & Public Health Data Science
+
+**University of California, Los Angeles (UCLA)**					
+Los Angeles, CA | June 2018  
+Bachelor of Science, Cognitive Science with Specialization in Computing			         
+
+## Experience  
+**Columbia University, Mailman School of Public Health**				    
+New York, NY | June 2021 – Present  
+*Lead Teaching Assistant*						                      
+
+* Manage team of 4 faculty members and 28 teaching assistants to support 670+ Master’s level students in “Research Methods & Applications: Quantitative Foundations”
+
+**ICAP at Columbia University** 					      		    
+New York, NY | May 2021 – September 2021  
+*Data Analyst Intern, PHIA Survey*  					       
+
+* Accelerated return of participant HIV results for nationwide survey by merging complex datasets and producing summary statistics and reports using SAS macros, data step, proc report, and ODS
+* Facilitated process for ordering confirmatory viral load tests in consultation with lab teams in Mozambique and CDC lab specialists
+
+**UC San Diego Health**  
+San Diego, CA | August 2019 – April 2021  
+*Survey Researcher*  							            
+
+* Recruited 100 schools and coordinated survey implementation to measure statewide adolescent tobacco use rates and evaluate educator perspective on tobacco-use prevention 
+* Improved efficiency for team of 4 recruiters by developing research protocols for email communication, data cleaning/monitoring, and reporting
+* Spearheaded remote survey pilot with 16 schools after statewide school closures due to COVID-19
+* Created Tableau dashboard reports for 390 participating schools and coordinated report distribution to county health departments and school administrators
+* Designed and edited front end website content using Word Press (www.calschooltobacco.org)
+
+**San Diego State University Research Foundation** 	 				   
+San Diego, CA	| October 2018 - September 2019  
+*Research Assistant*  
+
+* Developed survey questions and designed 56-item survey in Qualtrics to evaluate training effectiveness and participant satisfaction for community health leadership training program
+* Generated reports of activities and findings for county health department with recommendations for program improvement and future evaluation activities 

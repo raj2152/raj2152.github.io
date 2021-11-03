@@ -1,0 +1,18 @@
+---
+title: "P8105 Website for raj2152"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Welcome!  
+
+
+This is my website for P8105 Data Science I in Fall 2021.   
+
+
+<img src="images/Spot_the_cow.gif" style="width:75%">  
+
+
+Please see the links to my [About](about.html) and [Academic and Professional Experience](resume.html) pages.   

@@ -1,0 +1,10 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## A little bit about me...     
+I received a BS in Cognitive Science from UCLA in 2018 and am currently pursing my MPH at Columbia University Mailman School of Public Health. I am a second year MPH student in the Department of Health Policy & Management with a certificate in Applied Biostatistics and Public Health Data Science.   

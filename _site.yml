@@ -1,0 +1,18 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Resume"
+      href: resume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<raj2152@cumc.columbia.edu>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/rachellejuan/ 
+    - icon: fa-github fa-lg
+      href: http://github.com/raj2152/
+output:
+  html_document:
+    theme: sandstone
